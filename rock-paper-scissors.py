@@ -26,6 +26,7 @@ def player_pick():
     elif ask == 'scissors':
         return "scissors"
     else:
+        clear()
         print('Invalid selection!')
         return player_pick()
 
@@ -44,10 +45,14 @@ def replay():
     if new_round == 'yes':
         clear()
         return True
-    else:
+    elif new_round =='no':
         clear()
         print('Thank you for playing!')
         return False
+    else:
+        clear()
+        print('Please enter "yes" or "no"')
+        return replay()
 
 ## Game play below ##
 
